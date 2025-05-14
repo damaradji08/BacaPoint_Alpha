@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/adminTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="8dp"
+            android:text="Admin"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNamaBuku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Buku"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPenerbit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Penerbit"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etTanggalBaca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tanggal Terbit"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Poin"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah"
+            android:backgroundTint="#26C270"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/bTabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lihat Tabel"
+            android:backgroundTint="#26C270"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>
