@@ -17,7 +17,7 @@
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/montserrat_bold"
             android:padding="8dp"
-            android:text="Tambah Buku"
+            android:text="Update Buku"
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -28,7 +28,7 @@
             android:orientation="vertical"></LinearLayout>
 
         <EditText
-            android:id="@+id/etNamaBuku"
+            android:id="@+id/etNamaBukuUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama Buku"
@@ -38,7 +38,7 @@
             android:layout_marginBottom="12dp" />
 
         <EditText
-            android:id="@+id/etPenerbit"
+            android:id="@+id/etPenerbitUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Penerbit"
@@ -48,7 +48,7 @@
             android:layout_marginBottom="12dp" />
 
         <EditText
-            android:id="@+id/etTanggalBaca"
+            android:id="@+id/etTanggalBacaUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tanggal Terbit"
@@ -59,7 +59,7 @@
             android:layout_marginBottom="12dp" />
 
         <EditText
-            android:id="@+id/etGenre"
+            android:id="@+id/etGenreUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Genre"
@@ -69,20 +69,20 @@
             android:layout_marginBottom="16dp" />
 
         <Button
-            android:id="@+id/btnSimpan"
+            android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tambah"
+            android:text="Ubah"
             android:backgroundTint="#26C270"
             android:textColor="#FFFFFF"
             android:fontFamily="@font/montserrat_bold"
             android:layout_marginBottom="12dp" />
 
         <Button
-            android:id="@+id/bTabel"
+            android:id="@+id/btnCancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lihat Tabel"
+            android:text="Batal"
             android:backgroundTint="#26C270"
             android:fontFamily="@font/montserrat_bold"
             android:textColor="#FFFFFF" />

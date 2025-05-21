@@ -11,23 +11,21 @@ import android.util.Log;
 public class DatabaseManager {
 
     private static final String ROW_ID = "_id";
-    private static final String ROW_NAMA = "nama";
     private static final String ROW_BUKU = "nama_buku";
     private static final String ROW_PENERBIT = "penerbit";
     private static final String ROW_TANGGAL = "tanggal_baca";
-    private static final String ROW_POIN = "poin";
+    private static final String ROW_GENRE = "genre";
 
     private static final String NAMA_DB = "database1";
     private static final String NAMA_TABEL = "tblbacaan";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
     private static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS " + NAMA_TABEL + " (" +
             ROW_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            ROW_NAMA + " TEXT, " +
             ROW_BUKU + " TEXT, " +
             ROW_PENERBIT + " TEXT, " +
             ROW_TANGGAL + " TEXT, " +
-            ROW_POIN + " INTEGER)";
+            ROW_GENRE + " TEXT)";
 
     private final Context context;
     private DatabaseOpenHelper dbHelper;
@@ -36,11 +34,15 @@ public class DatabaseManager {
     public DatabaseManager(Context ctx) {
         this.context = ctx;
         dbHelper = new DatabaseOpenHelper(context);
-        // Jangan langsung buka DB di sini
     }
 
     public void open() {
-        setDb(dbHelper.getWritableDatabase());
+        try {
+            db = dbHelper.getWritableDatabase();
+        } catch (Exception e) {
+            Log.e("DatabaseManager", "Error opening database: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     public SQLiteDatabase getDb() {
@@ -70,16 +72,21 @@ public class DatabaseManager {
     }
 
     public void close() {
-        dbHelper.close();
+        if (dbHelper != null) {
+            dbHelper.close();
+        }
     }
 
-    public void addRow(String nama, String namaBuku, String penerbit, String tanggalBaca, int poin) {
+    public void addRow(String namaBuku, String penerbit, String tanggalBaca, String genre) {
+        if (db == null || !db.isOpen()) {
+            open(); // Make sure database is open
+        }
+
         ContentValues values = new ContentValues();
-        values.put(ROW_NAMA, nama);
         values.put(ROW_BUKU, namaBuku);
         values.put(ROW_PENERBIT, penerbit);
         values.put(ROW_TANGGAL, tanggalBaca);
-        values.put(ROW_POIN, poin);
+        values.put(ROW_GENRE, genre);
 
         try {
             db.insert(NAMA_TABEL, null, values);
@@ -89,13 +96,16 @@ public class DatabaseManager {
         }
     }
 
-    public void updateRecord(int id, String nama, String namaBuku, String penerbit, String tanggalBaca, int poin) {
+    public void updateRecord(int id, String namaBuku, String penerbit, String tanggalBaca, String genre) {
+        if (db == null || !db.isOpen()) {
+            open(); // Make sure database is open
+        }
+
         ContentValues values = new ContentValues();
-        values.put(ROW_NAMA, nama);
         values.put(ROW_BUKU, namaBuku);
         values.put(ROW_PENERBIT, penerbit);
         values.put(ROW_TANGGAL, tanggalBaca);
-        values.put(ROW_POIN, poin);
+        values.put(ROW_GENRE, genre);
 
         try {
             db.update(NAMA_TABEL, values, ROW_ID + "=" + id, null);
@@ -106,6 +116,10 @@ public class DatabaseManager {
     }
 
     public void deleteRecord(int id) {
+        if (db == null || !db.isOpen()) {
+            open(); // Make sure database is open
+        }
+
         try {
             db.delete(NAMA_TABEL, ROW_ID + "=" + id, null);
         } catch (Exception e) {
@@ -116,30 +130,38 @@ public class DatabaseManager {
 
     public ArrayList<ArrayList<Object>> ambilSemuaBaris() {
         ArrayList<ArrayList<Object>> dataArray = new ArrayList<>();
-        Cursor cur;
+
+        if (db == null || !db.isOpen()) {
+            open(); // Make sure database is open
+        }
+
+        Cursor cur = null;
 
         try {
             cur = db.query(NAMA_TABEL,
-                    new String[]{ROW_ID, ROW_NAMA, ROW_BUKU, ROW_PENERBIT, ROW_TANGGAL, ROW_POIN},
+                    new String[]{ROW_ID, ROW_BUKU, ROW_PENERBIT, ROW_TANGGAL, ROW_GENRE},
                     null, null, null, null, null);
 
-            cur.moveToFirst();
-            while (!cur.isAfterLast()) {
-                ArrayList<Object> dataList = new ArrayList<>();
-                dataList.add(cur.getInt(0));     // id
-                dataList.add(cur.getString(1));  // nama
-                dataList.add(cur.getString(2));  // nama buku
-                dataList.add(cur.getString(3));  // penerbit
-                dataList.add(cur.getString(4));  // tanggal baca
-                dataList.add(cur.getInt(5));     // poin
-                dataArray.add(dataList);
-                cur.moveToNext();
+            if (cur != null && cur.moveToFirst()) {
+                do {
+                    ArrayList<Object> dataList = new ArrayList<>();
+                    dataList.add(cur.getInt(0));     // ID
+                    dataList.add(cur.getString(1));  // Nama Buku
+                    dataList.add(cur.getString(2));  // Penerbit
+                    dataList.add(cur.getString(3));  // Tanggal Baca
+                    dataList.add(cur.getString(4));  // Genre
+                    dataArray.add(dataList);
+                } while (cur.moveToNext());
             }
-            cur.close();
         } catch (Exception e) {
             Log.e("Database ERROR", e.toString());
             e.printStackTrace();
+        } finally {
+            if (cur != null && !cur.isClosed()) {
+                cur.close();
+            }
         }
+
         return dataArray;
     }
 }

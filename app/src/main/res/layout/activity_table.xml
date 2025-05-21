@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Judul -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/adminTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="8dp"
+            android:text="Table"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnUbah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#26C270"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Ubah"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnHapus"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#ff443d"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Hapus"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Header Tabel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="ID"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="BUKU"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="PENERBIT"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="TANGGAL"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="GENRE"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--  Tabel -->
+    <TableLayout
+        android:id="@+id/table_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtID"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#EBEBEB"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="ID"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtBuku"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#EBEBEB"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="BUKU"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPenerbit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#EBEBEB"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="PENERBIT"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTanggal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#EBEBEB"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="TANGGAL"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtGenre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#EBEBEB"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="GENRE"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>
