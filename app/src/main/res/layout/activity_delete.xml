@@ -1,149 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#EBEBEB"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/deleteTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hapus Buku"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/montserrat_bold"
-        android:gravity="left"
-        android:layout_marginBottom="16dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="vertical">
-
-    </LinearLayout>
+        android:padding="1dp"
+        android:text="Hapus Buku"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Apakah Anda yakin ingin menghapus buku ini?"
-        android:textSize="14sp"
-        android:gravity="center"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/montserrat"
-        android:layout_marginBottom="24dp"/>
+        android:text="Apakah Anda yakin ingin menghapus data berikut?"
+        android:textColor="#666666"
+        android:textSize="16sp" />
 
+    <!-- Card for book details -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="8dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nama Buku:"
-            android:fontFamily="@font/montserrat_bold"
-            android:textStyle="bold"/>
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/edit_text_background"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/tvNamaBukuDelete"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text=""/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="8dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Penerbit:"
-            android:fontFamily="@font/montserrat_bold"
-            android:textStyle="bold"/>
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Nama Buku: "
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tvPenerbitDelete"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text=""/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="8dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tanggal Baca:"
-            android:fontFamily="@font/montserrat_bold"
-            android:textStyle="bold"/>
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Penerbit: "
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tvTanggalBacaDelete"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text=""/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="24dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Genre:"
-            android:fontFamily="@font/montserrat_bold"
-            android:textStyle="bold"/>
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Tanggal: "
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tvGenreDelete"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text=""/>
+            android:fontFamily="@font/montserrat"
+            android:text="Genre: "
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
     </LinearLayout>
 
-    <LinearLayout
+    <Button
+        android:id="@+id/btnDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#ff443d"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Hapus"
+        android:textColor="#FFFFFF" />
 
-        <Button
-            android:id="@+id/btnCancelDelete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#26C270"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Batal"
-            android:layout_marginEnd="8dp"/>
-
-        <Button
-            android:id="@+id/btnConfirmDelete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Hapus"
-            android:backgroundTint="#ff443d"
-            android:layout_marginStart="8dp"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnCancelDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#26C270"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Batal"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

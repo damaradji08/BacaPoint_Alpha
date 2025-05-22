@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +10,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/adminTitle"
+            android:id="@+id/updateTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
@@ -72,18 +71,18 @@
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ubah"
+            android:text="Update"
             android:backgroundTint="#26C270"
             android:textColor="#FFFFFF"
             android:fontFamily="@font/montserrat_bold"
             android:layout_marginBottom="12dp" />
 
         <Button
-            android:id="@+id/btnCancel"
+            android:id="@+id/btnCancelUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Batal"
-            android:backgroundTint="#26C270"
+            android:backgroundTint="#ff443d"
             android:fontFamily="@font/montserrat_bold"
             android:textColor="#FFFFFF" />
 
