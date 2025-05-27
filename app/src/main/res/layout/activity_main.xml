@@ -80,7 +80,7 @@
                 android:background="@drawable/edit_text_background"
                 android:padding="12dp"
                 android:fontFamily="@font/montserrat"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="12dp" />
 
             <Button
                 android:id="@+id/btnSimpan"
@@ -90,7 +90,7 @@
                 android:backgroundTint="#26C270"
                 android:textColor="#FFFFFF"
                 android:fontFamily="@font/montserrat_bold"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginBottom="3dp" />
 
             <Button
                 android:id="@+id/bTabel"
