@@ -3,147 +3,158 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EBEBEB"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <!-- Title Section - Fixed at top -->
+    <!-- Full Width Header Section - NO PADDING -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="#26C270"
+        android:padding="12dp">
 
         <TextView
             android:id="@+id/adminTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
             android:fontFamily="@font/montserrat_bold"
-            android:padding="8dp"
+            android:padding="4dp"
             android:text="Table Data"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="left" />
     </LinearLayout>
 
-    <!-- Button Section - Fixed at top -->
+    <!-- Content Section with Padding -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="-25dp"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/btnUbah"
+        <!-- Button Section -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginRight="3dp"
-            android:layout_weight="1"
-            android:backgroundTint="#26C270"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Ubah"
-            android:textColor="#FFFFFF" />
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
 
-        <Button
-            android:id="@+id/btnHapus"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="3dp"
-            android:backgroundTint="#ff443d"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Hapus"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
-
-    <!-- Scrollable Table Section -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true"
-        android:scrollbars="vertical"
-        android:fadeScrollbars="false">
-
-        <TableLayout
-            android:id="@+id/table_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:stretchColumns="*">
-
-            <!-- Header Row - Always visible at top of table -->
-            <TableRow
+            <Button
+                android:id="@+id/btnUbah"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="#26C270"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Ubah"
+                android:textColor="#FFFFFF" />
 
-                <TextView
-                    android:id="@+id/txtID"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#E0E0E0"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="ID"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textColor="#000000" />
+            <Button
+                android:id="@+id/btnHapus"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="3dp"
+                android:backgroundTint="#ff443d"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Hapus"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtBuku"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:background="#E0E0E0"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="BUKU"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textColor="#000000" />
+        <!-- Scrollable Table Section -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false">
 
-                <TextView
-                    android:id="@+id/txtPenerbit"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:background="#E0E0E0"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="PENERBIT"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textColor="#000000" />
+            <TableLayout
+                android:id="@+id/table_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:stretchColumns="*">
 
-                <TextView
-                    android:id="@+id/txtTanggal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.75"
-                    android:background="#E0E0E0"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="TANGGAL"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textColor="#000000" />
+                <!-- Header Row - Always visible at top of table -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/txtGenre"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:background="#E0E0E0"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="GENRE"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textColor="#000000" />
-            </TableRow>
+                    <TextView
+                        android:id="@+id/txtID"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#E0E0E0"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="ID"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#000000" />
 
-        </TableLayout>
+                    <TextView
+                        android:id="@+id/txtBuku"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#E0E0E0"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="BUKU"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#000000" />
 
-    </ScrollView>
+                    <TextView
+                        android:id="@+id/txtPenerbit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#E0E0E0"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="PENERBIT"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtTanggal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.75"
+                        android:background="#E0E0E0"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="TANGGAL"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtGenre"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#E0E0E0"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="GENRE"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#000000" />
+                </TableRow>
+
+            </TableLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
 
 </LinearLayout>

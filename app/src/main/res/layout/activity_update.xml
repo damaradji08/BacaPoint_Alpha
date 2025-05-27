@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -5,86 +6,103 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/updateTitle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:padding="8dp"
-            android:text="Update Buku"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:background="#26C270"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/updateTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="4dp"
+                android:text="Update Buku"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="left" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="108dp"
-            android:orientation="vertical"></LinearLayout>
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/etNamaBukuUpdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nama Buku"
-            android:background="@drawable/edit_text_background"
-            android:padding="12dp"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginBottom="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/etPenerbitUpdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Penerbit"
-            android:background="@drawable/edit_text_background"
-            android:padding="12dp"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginBottom="12dp" />
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/etTanggalBacaUpdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tanggal Terbit"
-            android:background="@drawable/edit_text_background"
-            android:padding="12dp"
-            android:fontFamily="@font/montserrat"
-            android:focusable="false"
-            android:layout_marginBottom="12dp" />
+            <EditText
+                android:id="@+id/etNamaBukuUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:fontFamily="@font/montserrat"
+                android:hint="Nama Buku"
+                android:padding="12dp" />
 
-        <EditText
-            android:id="@+id/etGenreUpdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Genre"
-            android:background="@drawable/edit_text_background"
-            android:padding="12dp"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginBottom="16dp" />
+            <EditText
+                android:id="@+id/etPenerbitUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:fontFamily="@font/montserrat"
+                android:hint="Penerbit"
+                android:padding="12dp" />
 
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Update"
-            android:backgroundTint="#26C270"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/montserrat_bold"
-            android:layout_marginBottom="12dp" />
+            <EditText
+                android:id="@+id/etTanggalBacaUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:hint="Tanggal Terbit"
+                android:padding="12dp" />
 
-        <Button
-            android:id="@+id/btnCancelUpdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Batal"
-            android:backgroundTint="#ff443d"
-            android:fontFamily="@font/montserrat_bold"
-            android:textColor="#FFFFFF" />
+            <EditText
+                android:id="@+id/etGenreUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/edit_text_background"
+                android:fontFamily="@font/montserrat"
+                android:hint="Genre"
+                android:padding="12dp" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#26C270"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Update"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnCancelUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ff443d"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Batal"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

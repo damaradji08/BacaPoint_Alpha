@@ -6,86 +6,100 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/adminTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:padding="8dp"
-            android:text="Tambah Buku"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="108dp"
-            android:orientation="vertical"></LinearLayout>
-
-        <EditText
-            android:id="@+id/etNamaBuku"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama Buku"
-            android:background="@drawable/edit_text_background"
+            android:background="#26C270"
             android:padding="12dp"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="16dp">
 
-        <EditText
-            android:id="@+id/etPenerbit"
+            <TextView
+                android:id="@+id/adminTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="4dp"
+                android:text="Tambah Buku"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="left" />
+        </LinearLayout>
+
+        <!-- Rest of the form -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Penerbit"
-            android:background="@drawable/edit_text_background"
-            android:padding="12dp"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginBottom="12dp" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/etTanggalBaca"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tanggal Terbit"
-            android:background="@drawable/edit_text_background"
-            android:padding="12dp"
-            android:fontFamily="@font/montserrat"
-            android:focusable="false"
-            android:layout_marginBottom="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:orientation="vertical"></LinearLayout>
 
-        <EditText
-            android:id="@+id/etGenre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Genre"
-            android:background="@drawable/edit_text_background"
-            android:padding="12dp"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginBottom="16dp" />
+            <EditText
+                android:id="@+id/etNamaBuku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Buku"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginBottom="12dp" />
 
-        <Button
-            android:id="@+id/btnSimpan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tambah"
-            android:backgroundTint="#26C270"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/montserrat_bold"
-            android:layout_marginBottom="12dp" />
+            <EditText
+                android:id="@+id/etPenerbit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Penerbit"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginBottom="12dp" />
 
-        <Button
-            android:id="@+id/bTabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lihat Tabel"
-            android:backgroundTint="#26C270"
-            android:fontFamily="@font/montserrat_bold"
-            android:textColor="#FFFFFF" />
+            <EditText
+                android:id="@+id/etTanggalBaca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal Terbit"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:fontFamily="@font/montserrat"
+                android:focusable="false"
+                android:layout_marginBottom="12dp" />
 
+            <EditText
+                android:id="@+id/etGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Genre"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah"
+                android:backgroundTint="#26C270"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/bTabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lihat Tabel"
+                android:backgroundTint="#26C270"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
