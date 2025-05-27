@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#26C270"
+            android:padding="24dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/loginTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Login"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Login Form -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Welcome Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang"
+                android:textSize="24sp"
+                android:textColor="#333333"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Silakan masuk ke akun Anda"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Username/Email Field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username atau Email"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan username atau email"
+                android:background="@drawable/edit_text_background"
+                android:padding="16dp"
+                android:fontFamily="@font/montserrat"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Password Field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kata Sandi"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan kata sandi"
+                android:background="@drawable/edit_text_background"
+                android:padding="16dp"
+                android:fontFamily="@font/montserrat"
+                android:inputType="textPassword"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Forgot Password Link -->
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lupa kata sandi?"
+                android:textSize="14sp"
+                android:textColor="#26C270"
+                android:fontFamily="@font/montserrat"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masuk"
+                android:backgroundTint="#26C270"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Divider -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#CCCCCC" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="atau"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#CCCCCC" />
+            </LinearLayout>
+
+            <!-- Register Link -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Belum punya akun? "
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:fontFamily="@font/montserrat" />
+
+                <TextView
+                    android:id="@+id/tvRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daftar sekarang"
+                    android:textSize="14sp"
+                    android:textColor="#26C270"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

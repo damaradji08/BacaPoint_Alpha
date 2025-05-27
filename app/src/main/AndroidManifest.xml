@@ -12,24 +12,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BacaPoint_Alpha"
         tools:targetApi="31">
+
+        <!-- LoginActivity is now the main launcher activity -->
         <activity
-            android:name=".TableActivity"
-            android:exported="true" />
-        <activity
-            android:name=".UpdateActivity"
-            android:exported="true" />
-        <activity
-            android:name=".DeleteActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BacaPoint_Alpha">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MainActivity is no longer the launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TableActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".DeleteActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
