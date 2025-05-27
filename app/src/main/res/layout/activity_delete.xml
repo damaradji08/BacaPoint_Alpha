@@ -23,7 +23,7 @@
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/montserrat"
         android:text="Apakah Anda yakin ingin menghapus data berikut?"
-        android:textColor="#666666"
+        android:textColor="#616161"
         android:textSize="16sp" />
 
     <!-- Card for book details -->
@@ -80,7 +80,7 @@
         android:id="@+id/btnDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="2dp"
         android:backgroundTint="#ff443d"
         android:fontFamily="@font/montserrat_bold"
         android:text="Hapus"
